@@ -1,0 +1,73 @@
+# calculator_1_to_0.py
+
+import math
+
+print("------ CALCULATOR (1 to 0 Options) ------")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+print("5. Square")
+print("6. Cube")
+print("7. Square Root")
+print("8. Power (a^b)")
+print("9. Percentage")
+print("0. Exit")   # 0 = Exit
+
+while True:
+    choice = input("\nChoose option (1-0): ")   # 1 to 0 meaning 1 to 10
+
+    if choice == "1":
+        a = float(input("Enter first number: "))
+        b = float(input("Enter second number: "))
+        print("Result:", a + b)
+
+    elif choice == "2":
+        a = float(input("Enter first number: "))
+        b = float(input("Enter second number: "))
+        print("Result:", a - b)
+
+    elif choice == "3":
+        a = float(input("Enter first number: "))
+        b = float(input("Enter second number: "))
+        print("Result:", a * b)
+
+    elif choice == "4":
+        a = float(input("Enter first number: "))
+        b = float(input("Enter second number: "))
+        if b == 0:
+            print("Error: Cannot divide by zero!")
+        else:
+            print("Result:", a / b)
+
+    elif choice == "5":
+        a = float(input("Enter number: "))
+        print("Square:", a * a)
+
+    elif choice == "6":
+        a = float(input("Enter number: "))
+        print("Cube:", a * a * a)
+
+    elif choice == "7":
+        a = float(input("Enter number: "))
+        if a < 0:
+            print("Error: Negative number!")
+        else:
+            print("Square Root:", math.sqrt(a))
+
+    elif choice == "8":
+        a = float(input("Enter base: "))
+        b = float(input("Enter power: "))
+        print("Result:", a ** b)
+
+    elif choice == "9":
+        a = float(input("Enter number: "))
+        p = float(input("Enter percentage (%): "))
+        print("Result:", (a * p) / 100)
+
+    elif choice == "0":
+        print("Goodbye!")
+        break
+
+    else:
+        print("Invalid choice! Try again.")
